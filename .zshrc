@@ -44,3 +44,11 @@ fi
 
 # set neovim as editor
 export EDITOR="nvim"
+
+# brew Brewfile shell hook
+brew() {
+  command brew "$@"
+  if [[ "$1" =~ ^(install|upgrade|uninstall)$ ]]; then
+    brew bundle dump --force --file=~/.config/Brewfile >/dev/null
+  fi
+}
