@@ -36,3 +36,11 @@ export NVM_DIR="$HOME/.nvm"
 # My aliases
 alias ls=eza
 alias icat="kitten icat"
+
+# Run Machine Report only when in interactive mode
+if [[ $- == *i* ]]; then
+    ~/.local/bin/machine_report.sh
+fi
+
+# set neovim as editor
+export EDITOR="nvim"
