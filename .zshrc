@@ -23,9 +23,9 @@ pyenv() {
 }
 
 # nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # Loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"    # Loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # Loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"    # Loads nvm bash_completion
 
 # Docker completions - only load if Docker is actually installed and you use it frequently
 # Comment out if you don't need Docker completions
@@ -52,3 +52,4 @@ brew() {
     brew bundle dump --force --file=~/.config/Brewfile >/dev/null
   fi
 }
+source ${HOME}/.ghcup/env
